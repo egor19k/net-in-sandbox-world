@@ -1,0 +1,19 @@
+def net(addr,ip,port,datnet)->num:
+    if datnet==0:
+        n=floor(in(addr)*10000000)
+        rip=floor(n/10000)%1000
+        rport=floor(n/100)%100
+        if rip!=ip:
+            return 0
+        if rport!=port:
+            return 0
+        return floor(n%100)
+    if ip<0:ip=0
+    if ip>999:ip=999
+    if port<0:port=0
+    if port>99:port=99
+    if datnet<0:datnet=0
+    if datnet>99:datnet=99
+    n=ip*10000+port*100+datnet
+    out(addr,n/10000000)
+    return n
