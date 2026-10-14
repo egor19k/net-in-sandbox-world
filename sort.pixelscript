@@ -13,6 +13,8 @@ def sort(inp) -> num:
         erase(q,best)
         erase(t,best)
         return val
+    if len(q)>=126:
+        return 0
     push(q,inp)
     push(t,0)
     for i in range(len(t)):
